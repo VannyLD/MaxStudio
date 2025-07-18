@@ -1,0 +1,13 @@
+@echo off
+echo Closing current application...
+taskkill /IM "Max_Studio v1.0.9.exe" /F
+timeout /t 2 /nobreak
+
+echo Downloading new version...
+powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/VannyLD/MaxStudio/releases/download/v1.1.9/Max.Studio.exe', 'Max_Studio.exe')"
+
+echo Starting new version...
+start Max_Studio.exe
+
+echo Cleaning up...
+del "%~f0"

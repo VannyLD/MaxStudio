@@ -4,10 +4,10 @@ taskkill /IM "Max_Studio.exe" /F
 timeout /t 2 /nobreak
 
 echo Downloading new version...
-powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/VannyLD/MaxStudio/releases/download/v1.2.1/Max.Studio.v1.2.1.exe', 'Max_Studio.exe')"
+powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/VannyLD/MaxStudio/releases/download/v1.2.2/Max.Studio.Pro.v1.2.2.exe', 'Max.Studio.Pro.v1.2.2.ex')"
 
 echo Starting new version...
-start Max_Studio.exe
+start Max.Studio.Pro.v1.2.2.ex
 
 echo Cleaning up...
 del "%~f0"

@@ -1,13 +1,13 @@
 @echo off
 echo Closing current application...
-taskkill /IM "Max.Studio.Pro.v1.2.3.ex" /F
+taskkill /IM "Max.Studio.Pro.v1.2.3.exe" /F
 timeout /t 2 /nobreak
 
 echo Downloading new version...
-powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/VannyLD/MaxStudio/releases/download/v1.2.4/Max.Studio.Pro.v1.2.4.exe', 'Max.Studio.Pro.v1.2.4.ex')"
+powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/VannyLD/MaxStudio/releases/download/v1.2.4/Max.Studio.Pro.v1.2.4.exe', 'Max.Studio.Pro.v1.2.4.exe')"
 
 echo Starting new version...
-start Max.Studio.Pro.v1.2.4.ex
+start Max.Studio.Pro.v1.2.4.exe
 
 echo Cleaning up...
 del "%~f0"
